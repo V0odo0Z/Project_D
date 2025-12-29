@@ -9,8 +9,9 @@ import androidx.room.ColumnInfo;
 public class Producto {
 
     //Atributos
-    @PrimaryKey
-    public int IdProducto;
+    @PrimaryKey //(autoGenerate = true)
+    @ColumnInfo (name = "id_producto")
+    public int idProducto;
     @ColumnInfo(name = "nombre_producto")
     public String nombreProducto;
     @ColumnInfo(name = "precio")

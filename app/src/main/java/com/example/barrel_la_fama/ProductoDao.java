@@ -17,8 +17,8 @@ public interface ProductoDao {
     @Query("SELECT * FROM productos WHERE nombre_producto = :nombreProducto")
     List<Producto> getProductoByName(String nombreProducto);
 
-    @Query("SELECT * FROM productos WHERE id_producto = :IdProducto")
-    Producto getProductoByID(int IdProducto);
+    @Query("SELECT * FROM productos WHERE id_producto = :idProducto")
+    Producto getProductoByID(int idProducto);
 
     @Insert (onConflict = OnConflictStrategy.REPLACE)
     void insertarProducto(Producto p);
