@@ -11,11 +11,11 @@ public class Producto {
     //Atributos
     @PrimaryKey
     public int IdProducto;
-    @ColumnInfo(nombre_producto = "nombreProducto")
+    @ColumnInfo(name = "nombre_producto")
     public String nombreProducto;
-    @ColumnInfo(precio = "precio")
+    @ColumnInfo(name = "precio")
     public BigDecimal precio;
-    @ColumnInfo(categoria_producto = "categoriaProducto")
+    @ColumnInfo(name = "categoria_producto")
     public String categoriaProducto;
 
     //Constructor
