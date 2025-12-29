@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+    <!-- Usar SP en el TAMAÑO DEL TEXTO para que el texto respete las preferencias de accesibilidad del usuario -->
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/barrel_la_fama"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="150dp"
+        android:textAlignment="center"
+        android:textSize="100sp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
+        android:layout_marginTop="100dp"
+        android:text="@string/entrar"
+        android:textSize="30sp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

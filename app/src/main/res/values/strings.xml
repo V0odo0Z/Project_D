@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Barrel_la_Fama</string>
+    <string name="entrar">Entrar</string>
+    <string name="barrel_la_fama">BARREL LA FAMA</string>
+    <string name="seleccionar_mesa">Seleccionar mesa</string>
+    <string name="crear_tem">crear ítem</string>
+</resources>
