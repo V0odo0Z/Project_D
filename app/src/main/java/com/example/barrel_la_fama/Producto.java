@@ -15,15 +15,17 @@ public class Producto {
     @ColumnInfo(name = "nombre_producto")
     public String nombreProducto;
     @ColumnInfo(name = "precio")
-    public BigDecimal precio;
+    public String precio;
     @ColumnInfo(name = "categoria_producto")
     public String categoriaProducto;
 
     //Constructor
 
-    public Producto (String nombreProducto, BigDecimal precio, String categoriaProducto){
+    public Producto (String nombreProducto, String precio, String categoriaProducto){
         this.nombreProducto = nombreProducto;
         this.precio = precio;
         this.categoriaProducto = categoriaProducto;
     }
+
+
 }

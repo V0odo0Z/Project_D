@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.barrel_la_fama"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.barrel_la_fama"
@@ -45,4 +45,7 @@ dependencies {
     //Implementacion ROOM ORM
     val room_version = "2.8.4"
     implementation("androidx.room:room-runtime:$room_version")
+    //Al usar java, el annotationProcessor es necesario
+    annotationProcessor ("androidx.room:room-compiler:$room_version")
+    implementation ("androidx.room:room-common:$room_version")
 }
