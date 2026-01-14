@@ -30,14 +30,29 @@ public class MainActivity extends AppCompatActivity {
         db = AppDatabase.getInstance(getApplicationContext());
         //Hay que tirarlo con un hilo independiente para evitar el cap del UI Thread de Room
         //Uso lambdas para facilitarlo
-        new Thread(() -> db.ProductoDAO().insertarProducto(new Producto("productoPrueba", "22.50", "Comida"))).start();
+        Producto p1 = new Producto("ProductoPrueba", "10.00", "Bebida");
+       // new Thread(() -> {db.ProductoDAO().insertarProducto(p1);}).start();
+        checkProducts();
+        //new Thread(() -> {db.ProductoDAO().eliminarProductoById(1);}).start();
+/*
+        new Thread(() -> {Producto p2 = db.ProductoDAO().getProductoByID(1);
+            p2.setPrecio("100");
+            db.ProductoDAO().actualizarProducto(p2);}).start();
+
+ */
+    }
+    //Methods
+    public void checkProducts(){
+        System.out.println("----- Productos en la BBDD -----");
         LiveData<List<Producto>> listaLD = db.ProductoDAO().getAll();
         listaLD.observe(this, lista -> {
             for(Producto p : lista){
                 System.out.println(p.toString());
             }
         });
+        System.out.println("------------------------");
     }
+
 }
 
-//TODO: La BBDD parece funcionar. Comprobar todas las funcionalidades e introducir los primeros datos
+//TODO: La BBDD parece funcionar. Meter datos.
