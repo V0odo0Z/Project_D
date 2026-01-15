@@ -55,4 +55,4 @@ public class MainActivity extends AppCompatActivity {
 
 }
 
-//TODO: La BBDD parece funcionar. Meter datos.
+//TODO: Productos --> Implementar logica de validacion y grabar en la bbdd

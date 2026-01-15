@@ -9,9 +9,9 @@ public class Tracker {
 
     //Atributes
     @PrimaryKey(autoGenerate = true)
-    private int idEntry;
+    private Integer idEntry;
     @ColumnInfo(name = "idItem")
-    private int idItem;
+    private Integer idItem;
     @ColumnInfo (name = "productName")
     private String productName;
     @ColumnInfo(name = "quantity")
@@ -33,19 +33,19 @@ public class Tracker {
         this.date = date;
     }
 
-    public int getIdEntry() {
+    public Integer getIdEntry() {
         return idEntry;
     }
 
-    public void setIdEntry(int idEntry) {
+    public void setIdEntry(Integer idEntry) {
         this.idEntry = idEntry;
     }
 
-    public int getIdItem() {
+    public Integer getIdItem() {
         return idItem;
     }
 
-    public void setIdItem(int idItem) {
+    public void setIdItem(Integer idItem) {
         this.idItem = idItem;
     }
 

@@ -7,7 +7,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-// TODO: Estructura correcta. Empezar a llenar campos
+//Estructura correcta
 
 public class mesaAdapter extends RecyclerView.Adapter<mesaAdapter.ViewHolder> {
     @NonNull
@@ -34,7 +34,7 @@ public class mesaAdapter extends RecyclerView.Adapter<mesaAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            botonMesa = itemView.findViewById(R.id.botonMesa);
+            //botonMesa = itemView.findViewById(R.id.botonMesa);
         }
     }
 }

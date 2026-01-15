@@ -1,6 +1,7 @@
 package com.example.barrel_la_fama;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Query;
 
 import java.util.List;
@@ -14,5 +15,7 @@ public interface TrackerDAO {
     @Query("SELECT * FROM historico WHERE productName = :productName")
     List<Tracker> sellsByName(String productName);
 
+    @Delete
+    void deleteEntry(Tracker t);
     //En un principio, no necesito mas metodos. Si quiero buscar por precio o por categoria, hago un getAll() y filtro
 }

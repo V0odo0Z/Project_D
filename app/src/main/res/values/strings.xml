@@ -4,4 +4,11 @@
     <string name="barrel_la_fama">BARREL LA FAMA</string>
     <string name="seleccionar_mesa">Seleccionar mesa</string>
     <string name="crear_tem">crear ítem</string>
+    <string name="actualizar_bbdd">Actualizar BBDD</string>
+    <string name="a_adir_tems">Añadir ítems</string>
+    <string name="nombre_del_producto">Nombre del producto</string>
+    <string name="precio_del_producto">Precio del producto</string>
+    <string name="categoria_del_producto">Categoria del producto</string>
+    <string name="a_adir_producto_a_la_bd">Añadir producto a la BD</string>
+    <string name="a_adir_producto_a_la_base_de_datos">AÑADIR PRODUCTO A LA BASE DE DATOS</string>
 </resources>
