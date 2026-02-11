@@ -18,7 +18,7 @@
         android:textAlignment="center"
         android:layout_marginTop="50dp"/>
     <Button
-        android:id="@+id/seleccionarMesaBoton"
+        android:id="@+id/anadir_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/a_adir_tems"
@@ -29,7 +29,19 @@
         />
 
     <Button
-        android:id="@+id/crearItemBoton"
+        android:id="@+id/importarCarta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/importar_carta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/anadir_item"
+        android:layout_marginTop="150dp"
+        android:textSize="30sp"
+        />
+
+    <!--
+    <Button
+        android:id="@+id/actualizarBBDD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/actualizar_bbdd"
@@ -38,4 +50,5 @@
         android:layout_marginBottom="50dp"
         android:textSize="30sp"
         />
+        -->
 </androidx.constraintlayout.widget.ConstraintLayout>

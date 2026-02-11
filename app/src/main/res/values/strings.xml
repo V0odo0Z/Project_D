@@ -11,4 +11,5 @@
     <string name="categoria_del_producto">Categoria del producto</string>
     <string name="a_adir_producto_a_la_bd">Añadir producto a la BD</string>
     <string name="a_adir_producto_a_la_base_de_datos">AÑADIR PRODUCTO A LA BASE DE DATOS</string>
+    <string name="importar_carta">Importar carta</string>
 </resources>

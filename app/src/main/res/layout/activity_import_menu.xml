@@ -7,4 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".ImportMenu">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uriCsv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Introducir ruta del archivo .csv"
+        android:layout_marginTop="300dp"
+        android:textAlignment="center"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/boton_aceptar_uri"
+        android:text="Importar menú del archivo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uriCsv"
+        android:layout_marginTop="100dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
