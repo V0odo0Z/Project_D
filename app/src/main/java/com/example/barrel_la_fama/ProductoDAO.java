@@ -32,4 +32,6 @@ public interface ProductoDAO {
     void eliminarProducto(Producto p);
     @Query("DELETE FROM productos WHERE id_producto = :idProducto")
     void eliminarProductoById(int idProducto);
+    @Query("DELETE FROM productos")
+    void eliminarProductosAll();
 }

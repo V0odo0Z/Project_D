@@ -2,6 +2,8 @@ package com.example.barrel_la_fama;
 
 import static android.content.Intent.ACTION_OPEN_DOCUMENT;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,7 +23,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ImportMenu extends AppCompatActivity {
     Uri uri;
-    Button aceptarBotton;
+    Button acceptButton;
     EditText uriEt;
     //Actividad que espera un resultado. La uso para lanzar el explorador de archivos y esperar el uri
     private ActivityResultLauncher<String[]> filePickerLauncher;
@@ -45,7 +47,7 @@ public class ImportMenu extends AppCompatActivity {
             }
         });
         uriEt = findViewById(R.id.uriCsv);
-        aceptarBotton = findViewById(R.id.boton_aceptar_uri);
+        acceptButton = findViewById(R.id.boton_aceptar_uri);
         uriEt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,20 +56,23 @@ public class ImportMenu extends AppCompatActivity {
             }
         });
 
-        aceptarBotton.setOnClickListener(new View.OnClickListener() {
+        acceptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Aqui recoger la uri, abrir el archivo, trocearlo e ir metiendo los productos en la bbdd
                 ProductImporter pi = new ProductImporter(uri);
+                pi.importMenu(ImportMenu.this);
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
             }
         });
     }
 
-    //Metodo para que salga el selector de archivos y me devuelva la uri.
+    //Method to open the file selector, select the file and get the uri
     public void selectFile(){
         //filePickerLauncher.launch(new String[]{"text/csv", "application/pdf"});
 
         //El filtro new String[]{} solo funciona de esta manera. Poniendo text/csv o text/.csv deja ver el archivo, pero no seleccionarlo
+        //Had to do it like that because text/csv only allows to see the file but not to select it
         filePickerLauncher.launch(new String[]{"text/*"});
     }
 }

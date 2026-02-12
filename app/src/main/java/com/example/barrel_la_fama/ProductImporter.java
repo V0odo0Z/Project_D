@@ -2,6 +2,7 @@ package com.example.barrel_la_fama;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 
 import java.io.BufferedReader;
@@ -33,6 +34,10 @@ public class ProductImporter {
         AppDatabase db = AppDatabase.getInstance(activity.getApplicationContext());
         //I'll do it all in a thread to avoid opening one thread per Product when saving in the DB
         new Thread (()-> {
+            //Elimino todos los registros anteriores
+            db.ProductoDAO().eliminarProductosAll();
+
+            Log.i("BBDD", "Todos los PRODUCTOS eliminados");
         try (InputStream is = activity.getApplicationContext().getContentResolver().openInputStream(uriMenu);
              BufferedReader br = new BufferedReader(new InputStreamReader(is));){
 

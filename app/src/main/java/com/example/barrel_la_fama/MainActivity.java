@@ -69,5 +69,4 @@ public class MainActivity extends AppCompatActivity {
 
 }
 
-//TODO: Productos, ImportMenu, ProductImporter(finalizado?) --> Implementar importacion desde csv (¿Por que? pues porque puedo... creo)
-// --> Probar la importacion del menu
+//TODO: productImporter finalizado. Pasar a mostrar los productos de la bbdd para seleccionar y meterlos en una list con la fecha y guardarlos en la BBDD.
